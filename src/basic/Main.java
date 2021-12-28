@@ -34,6 +34,18 @@ public class Main {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        Thread newThread = new NewThread();
+
+        newThread.start();
     }
+     private static class NewThread extends Thread {
+        @Override
+         public void run() {
+            System.out.println("New Thread Running is called " + this.getName());
+        }
+     }
 
 }
+
+
